@@ -7,7 +7,7 @@
    git clone https://github.com/infinity-sandbox/okx-binance-bot.git
    ```
 
-2. Update the configuration settings in the `config.yml` file as needed.
+2. Update the configuration settings in the `config/` folder as needed.
 
 3. Grant execute permissions to the installation script:
    ```bash
