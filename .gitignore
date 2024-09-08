@@ -15,6 +15,7 @@ downloads/
 eggs/
 **/.DS_Store
 .eggs/
+**/config.yml
 utils/old
 lib/
 lib64/
