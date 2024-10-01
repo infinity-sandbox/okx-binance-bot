@@ -1,0 +1,119 @@
+# Database-related
+db_host: "localhost"
+db_user: "jose"
+db_password: "Database1@"
+database: "okx_db"
+
+# db_host: "localhost"
+# db_user: "root"
+# db_password: ""
+# database: "okx_db"
+
+# /searchTraders endpoint config
+search_traders_config:
+  type_param: "pnl" # aum/pnl
+  max_traders_param: 200 # int
+  lead_trader_assets_high_param: 10000 # int/null
+  win_ratio: 0.5 # min (0.5-0.9)
+  aum_high: null # int/null
+  time_as_lead_trader: null # 7/30/90/180/null
+  has_vacancies: null # true, false, null
+  aum_low: null # int/null
+  lead_trader_assets_low: 1 # int/null
+
+# /getTradeStatsOfTraderById endpoint config
+get_trade_stats:
+  date_ranges:
+    - 7
+    - 30
+    - 90
+    - 365
+
+# filter traders to follow by previously fetched stats
+filter_traders_config:
+  7:
+    win_ratio: 0.5 # min
+    yield_ratio: 0.2 # min
+    current_follow_pnl: 1 # min
+    profit_days: 2 # min
+    loss_days: 5 # max
+    profit_loss_days_diff: 2 # min
+  30:
+    win_ratio: 0.5 # min
+    yield_ratio: 0.2 # min
+    current_follow_pnl: null # min
+    profit_days: null # min
+    loss_days: null # max
+    profit_loss_days_diff: null # min
+  90:
+    win_ratio: 0.5 # min
+    yield_ratio: 0.2 # min
+    current_follow_pnl: null # min
+    profit_days: null # min
+    loss_days: null # max
+    profit_loss_days_diff: null # min
+  365:
+    win_ratio: 0.5 # min
+    yield_ratio: 0.2 # min
+    current_follow_pnl: null # min
+    profit_days: null # min
+    loss_days: null # max
+    profit_loss_days_diff: null # min
+
+equity_of_total_equity: 100 # percents
+equity_per_single_pos: 10 # X%
+incr_decr_perc: 1 # Y%
+max_pos_size_perc: 20 # W%
+min_pos_size_perc: 1 # T% (make sure 'min_pos_size_perc' won't be less than 5 USDT or so)
+
+max_time_to_fill: 86400 # seconds
+
+ignore_neg_total_roi_traders: False
+ignore_neg_all_timeframes_roi_traders: True # If any of multiple timeframe ROIs will be negative or zero - these positions will be ignored
+ignore_observed_traders: True
+
+# (0 - 1), stop-loss ratio between entry and liquidation price
+# if 0, then SL = entry price, if 1, then SL = liquidation_price, if 0.5, then SL = the average price of the difference of entry and liquidation prices
+sl_ratio: 0.1
+
+copy_trader_by: "KC" # TC = 'trades_count', KC = 'kelly_criteria'
+
+# Binance api keys, secrets and instances related
+# x1 instances
+binance_api_key_x1: "C9cUEEcRXvRQ53vtkvmCGImHdRHwsDz1fcn7ImMyhq9LQI56N7SH9v8aHPOIUU7C"
+binance_api_secret_x1: "Ak9GbY9v86e5CW6YkmPGHvNoJJubaXkJ8c24iGzYti20F6oSLOYR1iV55lle8VGU"
+x1_copy_positions: True
+
+binance_api_key_x2: null
+binance_api_secret_x2: null
+x2_copy_positions: False
+
+binance_api_key_x3: null
+binance_api_secret_x3: null
+x3_copy_positions: False
+
+# RapidAPI related
+rapidapi_api_key: "edd1d91c0emsh850d5796d71ec42p142bf1jsn9a0c07340daf"
+
+# traders_top_types:
+#   - "daily"
+#   - "weekly"
+#   - "monthly"
+
+# positions_top_types:
+#   - "is_top_daily"
+#   - "is_top_weekly"
+#   - "is_top_monthly"
+
+# Telegram related
+telegram_api_id: "1251734"
+telegram_api_hash: "80806a228bdbd61b6dbd52c1945d3828"
+telegram_ch_id: "-1002097614440"
+telegram_bot_token: "6873670657:AAFEGAKu8iBhBWcBW0AqiC-INdqlrgkZgxg"
+
+# Scripts to check
+scripts_to_check:
+  - "python rapidapi.py"
+  - "python leaderboard.py x1"
+  - "python leaderboard.py x2"
+  - "python leaderboard.py x3"

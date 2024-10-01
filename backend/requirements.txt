@@ -11,6 +11,8 @@ certifi==2023.7.22
 cffi==1.15.1
 charset-normalizer==3.2.0
 click==8.1.7
+colorama==0.4.6
+colorlog==6.8.2
 cryptography==41.0.3
 exceptiongroup==1.2.2
 fastapi==0.105.0

@@ -29,6 +29,7 @@ setup(
     install_requires=requirements,
     extras_require={"dev": ["pytest", "wheel", "twine", "black", "setuptools"]},
     dependency_links=[
-        "git+ssh://git@github.com/infinity-sandbox/okx-binance-bot.git@76dd10709e9a11bf66ca4949f9f31d8daaa4f98a#egg=okx_binance_bot&subdirectory=server"
+        "git+ssh://git@github.com/infinity-sandbox/okx-binance-bot.git@e27692156f85ff720" \
+        "af588e3bef667fd44b03b89#egg=okx_binance_bot&subdirectory=server",
     ]
 )

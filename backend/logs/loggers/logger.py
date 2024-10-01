@@ -14,7 +14,11 @@ def logger_config(module):
     @parameter error
     @parameter critical
     @parameter exception
+    
     @returns logger
     '''
     logger = logging.getLogger(module)
     return logger
+
+def save_log(file_path_name: str):
+    pass
