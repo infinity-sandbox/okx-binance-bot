@@ -1,8 +1,6 @@
 from typing import List
-from logs.loggers.logger import logger_config
 from pydantic_settings import BaseSettings
 from pydantic import AnyHttpUrl
-logger = logger_config(__name__)
 from utils.version import get_version_and_build
 version, build = get_version_and_build()
 
@@ -16,9 +14,7 @@ class Settings(BaseSettings):
                                             ]
     PROJECT_NAME: str = "okx-binance-bot"
     CONFIG_FILE: str = "config.yml"
-    SQL_PATH: str = "app/schemas/sql"
     
-
     class Config:
         case_sensitive = True
         

@@ -5,23 +5,24 @@ __pycache__/
 
 # C extensions
 *.so
-
+.DS_Store
+node_modules/
 # Distribution / packaging
+# data/
+@�@��J
 .Python
-build/
-develop-eggs/
-dist/
-downloads/
-utils/old.zip
-**logs/
-eggs/
-**/.DS_Store
-.eggs/
-# **/config.yml
-old/rapidapi_positions/
-old/logs/
+prompt/extraction/data
+server/dist_*
 .vscode/
-**.log
+build/
+server/test_
+test_/
+develop-eggs/
+# dist/
+downloads/
+eggs/
+.eggs/
+*.egg-info/
 lib/
 lib64/
 parts/
@@ -33,7 +34,21 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
-backend/test/_test
+.DS_Store
+prompt/ingestion/cachetable.py
+Makefile
+# run.sh
+.env
+local_build.sh
+docker-compose2.yml
+
+test-practice/
+test_practice
+test_p/
+
+# Local Docker
+docker-compose-local.yml
+build-local.sh
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -63,9 +78,10 @@ cover/
 # Translations
 *.mo
 *.pot
-
+*.swp
+test_folder/
 # Django stuff:
-**/*.log
+*.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
@@ -79,6 +95,7 @@ instance/
 
 # Sphinx documentation
 docs/_build/
+test_practice/
 
 # PyBuilder
 .pybuilder/
@@ -129,13 +146,16 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-**/.env
+.env
 .venv
+venv_*/
 env/
+.env/
 venv/
 ENV/
 env.bak/
 venv.bak/
+prompt/retrieval/data/slack_private_images
 
 # Spyder project settings
 .spyderproject
@@ -167,3 +187,12 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+.credentials/
+frontend-chat/
+myenv/
+.tenxbot/
+server/test.py
+test_script/
+.env
+aibou.egg-info/
+venv_aibou/

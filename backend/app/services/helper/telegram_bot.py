@@ -1,7 +1,7 @@
 import asyncio
 from loguru import logger
 from telethon import TelegramClient, events
-from utils.helper import helpers as helpers
+from helper import helpers as helpers
 
 
 def send_telegram_message(msg: str):
@@ -19,7 +19,7 @@ def send_telegram_message(msg: str):
 
 
 async def main():
-    SESSION = "app/services/telegram/telegram_user.session"
+    SESSION = "services/helper/telegram_user.session"
     API_ID = init_config["telegram_api_id"]
     API_HASH = init_config["telegram_api_hash"]
 

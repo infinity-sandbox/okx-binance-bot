@@ -3,7 +3,7 @@ from datetime import datetime
 from typing import Optional
 import mysql.connector
 from loguru import logger
-import utils.helper.helpers as helpers
+from helper import helpers
 from pprint import pprint
 config = helpers.load_config_from_yaml()
 

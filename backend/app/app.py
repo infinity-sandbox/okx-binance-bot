@@ -4,7 +4,6 @@ from fastapi import FastAPI, HTTPException, Depends, Request, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from app.core.config import settings
-from logs.loggers.logger import logger_config
 from app.api.api_v1.router import router
 from utils.console.banner import run_banner
 
@@ -18,7 +17,7 @@ run_banner(settings.VERSION, settings.BUILD)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.BACKEND_CORS_ORIGINS,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

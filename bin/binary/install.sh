@@ -10,6 +10,3 @@ echo "Installing backend container..."
 docker-compose -f docker-compose.yml up --remove-orphans --force-recreate -d backend
 
 echo "Backend container installed successfully!"
-
-echo "Showing backend logs..."
-docker logs -f backend
