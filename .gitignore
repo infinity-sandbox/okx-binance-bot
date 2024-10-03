@@ -20,6 +20,7 @@ eggs/
 utils/old/rapidapi_positions/
 utils/old/logs/
 .vscode/
+**.log
 lib/
 lib64/
 parts/

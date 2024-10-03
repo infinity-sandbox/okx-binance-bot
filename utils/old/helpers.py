@@ -3,7 +3,6 @@ import json
 import math
 import os
 import time
-
 import psutil
 import yaml
 from loguru import logger
@@ -101,21 +100,21 @@ def is_command_running(command_to_find: str):
                 return True
     return False
 
-def is_valid_time_to_update_top_traders():
-    # Define your time window boundaries in UTC
-    start_time = datetime.time(0, 5)  # 00:05 UTC
-    end_time = datetime.time(0, 35)   # 00:35 UTC
 
+def is_valid_time_to_update_top_traders():
     # Get the current time in UTC
     current_time_utc = datetime.datetime.utcnow().time()
+    
+    # Set your desired time window boundaries (e.g., 30 minutes window)
+    start_time = (datetime.datetime.utcnow() - datetime.timedelta(minutes=1)).time()  # 1 minutes ago
+    end_time = (datetime.datetime.utcnow() + datetime.timedelta(minutes=1)).time()   # 1 minutes in the future
 
-    # Check if the current time is within the time window (30 minutes in this case)
+    # Check if the current time is within the time window
     if start_time <= current_time_utc <= end_time:
-        # Call your function here
-        # Example: your_function_name()
         return True
     else:
         return False
+
     
 def calc_perc_diff_between_x_y(x: float, y: float):
     abs_diff = abs(x - y)

@@ -1,10 +1,8 @@
 import time
 from datetime import datetime
 from typing import Optional
-
 import mysql.connector
 from loguru import logger
-
 import helpers
 from pprint import pprint
 
@@ -49,6 +47,7 @@ class DatabaseManager:
 
     def create_tables(self):
         # Creating initial tables (lb_api_session, trader, position_temp)
+        logger.info('Creating initial tables!')
         create_init_table_queries = [
             """
             CREATE TABLE IF NOT EXISTS trader (
@@ -189,6 +188,7 @@ class DatabaseManager:
             with self.connection.cursor() as cursor:
                 cursor.execute(query)
                 self.connection.commit()
+        
 
         # Creating multiple positions tables of different instances (x1, x2, etc.)
 
@@ -272,6 +272,7 @@ class DatabaseManager:
                 with self.connection.cursor() as cursor:
                     cursor.execute(query)
                     self.connection.commit()
+        logger.info('Tables Successful Created!')
 
     def insert_position(self, table, data):
        with self.connection.cursor() as cursor:
