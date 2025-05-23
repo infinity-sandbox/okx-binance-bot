@@ -3,7 +3,7 @@
 The bot is tested on Ubuntu only.
 
 ## Initial Setup
-1. Clone this repository to your local machine.
+1. Clone this repository to your local machine and go inside backend/ dir.
 2. Make sure you have MySQL installed on your system.
 3. Update the `config.yml` file.
 
