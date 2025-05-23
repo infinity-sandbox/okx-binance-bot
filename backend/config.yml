@@ -90,15 +90,15 @@ x3_copy_positions: False
 # RapidAPI related
 rapidapi_api_key: "edd1d91c0emsh850d5796d71ec42p142bf1jsn9a0c07340daf"
 
-# traders_top_types:
-#   - "daily"
-#   - "weekly"
-#   - "monthly"
+traders_top_types:
+  - "daily"
+  - "weekly"
+  - "monthly"
 
-# positions_top_types:
-#   - "is_top_daily"
-#   - "is_top_weekly"
-#   - "is_top_monthly"
+positions_top_types:
+  - "is_top_daily"
+  - "is_top_weekly"
+  - "is_top_monthly"
 
 # Telegram related
 telegram_api_id: "1251734"

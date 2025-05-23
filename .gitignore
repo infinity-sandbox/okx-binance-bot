@@ -5,7 +5,7 @@ __pycache__/
 
 # C extensions
 *.so
-
+old.zip
 # Distribution / packaging
 .Python
 build/
@@ -16,6 +16,7 @@ utils/old.zip
 **logs/
 eggs/
 **/.DS_Store
+backend/config.yml
 .eggs/
 # **/config.yml
 old/rapidapi_positions/
