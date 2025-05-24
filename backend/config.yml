@@ -75,8 +75,8 @@ copy_trader_by: "KC" # TC = 'trades_count', KC = 'kelly_criteria'
 
 # Binance api keys, secrets and instances related
 # x1 instances
-binance_api_key_x1: "C9cUEEcRXvRQ53vtkvmCGImHdRHwsDz1fcn7ImMyhq9LQI56N7SH9v8aHPOIUU7C"
-binance_api_secret_x1: "Ak9GbY9v86e5CW6YkmPGHvNoJJubaXkJ8c24iGzYti20F6oSLOYR1iV55lle8VGU"
+binance_api_key_x1: "xxxxxx"
+binance_api_secret_x1: "xxxxx"
 x1_copy_positions: True
 
 binance_api_key_x2: null
@@ -88,7 +88,7 @@ binance_api_secret_x3: null
 x3_copy_positions: False
 
 # RapidAPI related
-rapidapi_api_key: "edd1d91c0emsh850d5796d71ec42p142bf1jsn9a0c07340daf"
+rapidapi_api_key: "xxxxx"
 
 traders_top_types:
   - "daily"
@@ -104,7 +104,7 @@ positions_top_types:
 telegram_api_id: "1251734"
 telegram_api_hash: "80806a228bdbd61b6dbd52c1945d3828"
 telegram_ch_id: "-1002097614440"
-telegram_bot_token: "6873670657:AAFEGAKu8iBhBWcBW0AqiC-INdqlrgkZgxg"
+telegram_bot_token: "xxxxx:xxxx-xxxx"
 
 # Scripts to check
 scripts_to_check:
